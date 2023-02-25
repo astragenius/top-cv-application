@@ -94,3 +94,34 @@
   padding-right: 1.5rem;
   position: relative;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+form h3 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+
+.header {
+    
+  background-color: #cbd5e1;
+  padding: .5em;
+
+}
+.header h1 {
+  font-size: clamp(2.00rem, calc(1.13rem + 3.70vw), 4.00rem);
+  font-weight: 700;
+  text-align: center;
+  color: #262626;
+  
+}
