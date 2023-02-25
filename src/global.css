@@ -24,6 +24,8 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+
+    font-family: 'Lato';
   }
   /*
     6. Improve media defaults
@@ -77,22 +79,18 @@
 
 /* Google Icons */
 
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+/* util class */
+/**
+ * WRAPPER
+ * Sets a max width, adds a consistent gutter and horizontally
+ * centers the contents
+ */
+ .wrapper {
+  width: 90vw;
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
 }
-
-
-
-
-
-
