@@ -5,6 +5,8 @@ import SkillInput from './SkillInput'
 import Education from './Education'
 import Experience from './Experience'
 
+import CVPreview from './CVPreview'
+
 function Main() {
 
     const [value, setValue] = useState({})
@@ -29,7 +31,7 @@ function Main() {
         </section>
 
         <section className='preview__section'>
-          <h1>Preview Section</h1>
+         <CVPreview data={value}/>
         </section>
        
     </main>

@@ -9,13 +9,15 @@ function PersonalInput(props) {
     const [phoneNumber, setPhoneNumber] = useState('')
     const [email, setEmail] = useState('')
     const [about, setAbout] = useState('')
+    const [title, setTitle] = useState('')
+    const [image, setImage] = useState('')
     
    const sendInfo = props.getInfo;
 
   const getPersoInfo = (e) => {
     e.preventDefault()
-    const persoInfo = {name, lastName, phoneNumber, email, about}
-
+    const persoInfo = {name, lastName, title, phoneNumber, email, about, image}
+    console.log(persoInfo)
     
     sendInfo(persoInfo)
   } 
@@ -32,7 +34,14 @@ function PersonalInput(props) {
             </div>
             <div className='inputContainer'>
                 
+                <input placeholder='Currend Job title' type="tel" name="jobtitle" onChange={(e) => setTitle(e.target.value)}/>
+            </div>
+            <div className='inputContainer'>
+                
                 <input placeholder='Phone Number' type="tel" name="PnoneNumber" onChange={(e) => setPhoneNumber(e.target.value)}/>
+            </div>
+            <div className="inputContainer">
+                <input accept="image/png, image/jpeg" type="file" onChange={(e) => setImage(e.target.files)}/>
             </div>
             <div className='inputContainer'>
                

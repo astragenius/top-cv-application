@@ -97,7 +97,8 @@
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
 }
 
 form {
@@ -168,4 +169,24 @@ button {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
   padding-inline: 1em;
+}
+
+.preview__section {
+  
+}
+.cvpreview__section {
+  display: grid;
+  
+  
+}
+
+.preview__header {
+  background-color: #60fbb3;
+  padding: 0.5em 1em;
+}
+.preview__header h1 {
+  font-size: 3rem;
+}
+.preview__header h2{
+  font-size: 1.2rem;
 }
