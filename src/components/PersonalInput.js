@@ -21,24 +21,22 @@ function PersonalInput(props) {
   } 
     
   return (
-    <div>
+    <section>
         <form onSubmit={getPersoInfo}>
             <h3>Personal Details</h3>
             <div className='inputContainer'>
-                <label>First Name</label>
-                <input type="text" name="FirstName" onChange={(e) => setName(e.target.value)}/>
+                <input placeholder='First Name' type="text" name="FirstName" onChange={(e) => setName(e.target.value)}/>
             </div>
             <div className='inputContainer'>
-                <label>Last Name</label>
-                <input type="text" name="LastName" onChange={(e) => setLastName(e.target.value)}/>
+                <input placeholder='Last Name' type="text" name="LastName" onChange={(e) => setLastName(e.target.value)}/>
             </div>
             <div className='inputContainer'>
-                <label>Phone Number</label>
-                <input type="tel" name="PnoneNumber" onChange={(e) => setPhoneNumber(e.target.value)}/>
+                
+                <input placeholder='Phone Number' type="tel" name="PnoneNumber" onChange={(e) => setPhoneNumber(e.target.value)}/>
             </div>
             <div className='inputContainer'>
-                <label>Email</label>
-                <input type="email" name="Email" onChange={(e) => setEmail(e.target.value)}/>
+               
+                <input placeholder='Email adress' type="email" name="Email" onChange={(e) => setEmail(e.target.value)}/>
             </div>
             <div className='inputContainer'>
 
@@ -46,9 +44,10 @@ function PersonalInput(props) {
                 <textarea name="AboutMe" onChange={(e) => setAbout(e.target.value)}></textarea>
             </div>
 
-            <button type='submit'>Submit</button>
+            <button className='add__btn' type='submit'>Add</button>
+            <button className='del__btn' type='button'>Delete</button>
         </form>
-    </div>
+    </section>
   )
 }
 
