@@ -4,7 +4,7 @@ function PreviewDetails(props) {
     const {phoneNumber, email, image} = props.data
     console.log(image)
   return (
-    <section>
+    <section className='preview__details'>
         <h4>Personal Details</h4>
         <div>
             <p>Phone Number</p>

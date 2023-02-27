@@ -1,6 +1,9 @@
 import React from 'react'
 import PreviewDetails from './PreviewDetails'
+import PreviewEducation from './PreviewEducation'
+import PreviewExperience from './PreviewExperience'
 import PreviewHeader from './PreviewHeader'
+import PreviewSkills from './PreviewSkills'
 
 function CVPreview(props) {
 
@@ -17,6 +20,12 @@ function CVPreview(props) {
 
         <PreviewHeader data={headerData}/>
         <PreviewDetails data={detailsData}/>
+        <div className='preview__main'>
+
+          <PreviewSkills/>
+          <PreviewExperience/>
+          <PreviewEducation/>
+        </div>
 
     </section>
   )
