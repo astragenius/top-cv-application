@@ -2,7 +2,7 @@ import React from 'react'
 
 function PreviewSkills() {
   return (
-    <div>PreviewSkills</div>
+    <section><h4>Skills</h4></section>
   )
 }
 

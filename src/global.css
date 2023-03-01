@@ -177,14 +177,17 @@ button {
 .cvpreview__section {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  width: 210mm;
+  height: 297mm;
   
 }
 
 .preview__header {
-  background-color: #60fbb3;
-  padding: 0.5em 1em;
   
+  padding: 0.5em 1em;
+  grid-column: 1 / -1;
+  border: 2px solid black;
 }
 .preview__header h1 {
   font-size: 3rem;
@@ -195,9 +198,17 @@ button {
 .preview__main {
   
   border: 2px solid black;
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
 }
 .preview__details{
-  background-color: bisque;
- 
-  border: 2px solid magenta;
+  
+  border: 2px solid black;
+  
+  grid-row: 2 / -1;
+}
+
+.preview__details h4,
+.preview__main h4 {
+  font-size: 1.3rem;
 }

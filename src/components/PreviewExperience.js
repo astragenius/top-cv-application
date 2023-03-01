@@ -2,7 +2,7 @@ import React from 'react'
 
 function PreviewExperience() {
   return (
-    <div>Experience</div>
+    <section><h4>Experience</h4></section>
   )
 }
 

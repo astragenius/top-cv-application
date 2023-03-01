@@ -2,7 +2,9 @@ import React from 'react'
 
 function PreviewEducation() {
   return (
-    <div>PreviewEducation</div>
+    <section>
+      <h4>Education</h4>
+    </section>
   )
 }
 
