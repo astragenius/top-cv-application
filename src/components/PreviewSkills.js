@@ -2,7 +2,17 @@ import React from 'react'
 
 function PreviewSkills() {
   return (
-    <section><h4>Skills</h4></section>
+    <section>
+      <div className='title__preview'>
+          <h4>Skills</h4>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+      </div>
+
+      </section>
   )
 }
 

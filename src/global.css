@@ -98,7 +98,7 @@
 .main {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 1em;
+  gap: 2em;
 }
 
 form {
@@ -163,12 +163,16 @@ button {
   
 }
 
-
 .input__section {
+  padding-inline: 1em;
+}
+
+.input__section,
+.cvpreview__section {
   background-color: rgb(238, 238, 238);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 5px;
-  padding-inline: 1em;
+  
 }
 
 .preview__section {
@@ -181,34 +185,49 @@ button {
   width: 210mm;
   height: 297mm;
   
+  background-color: white;
+
+
+  
 }
 
 .preview__header {
   
-  padding: 0.5em 1em;
+  
   grid-column: 1 / -1;
-  border: 2px solid black;
+  background-color: rgb(20, 62, 114);
+  color: rgb(238, 238, 238);
+ 
+  padding-inline: 1em;
 }
 .preview__header h1 {
   font-size: 3rem;
 }
 .preview__header h2{
   font-size: 1.2rem;
+  
 }
 .preview__main {
   
-  border: 2px solid black;
+  /* border: 2px solid black; */
   grid-row: 2 / -1;
   grid-column: 2 / -1;
 }
 .preview__details{
   
-  border: 2px solid black;
-  
+ /*  border: 2px solid black; */
+  background-color: rgb(221, 221, 221);
   grid-row: 2 / -1;
+  padding-inline: 1em;
 }
 
 .preview__details h4,
 .preview__main h4 {
   font-size: 1.3rem;
+}
+
+.title__preview {
+  border-bottom: 1px solid #64748b;
+  margin-block: 1em;
+  color: rgb(20, 62, 114);
 }

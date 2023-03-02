@@ -1,4 +1,5 @@
 import React from 'react'
+import PreviewDescription from './PreviewDescription'
 import PreviewDetails from './PreviewDetails'
 import PreviewEducation from './PreviewEducation'
 import PreviewExperience from './PreviewExperience'
@@ -21,7 +22,7 @@ function CVPreview(props) {
         <PreviewHeader data={headerData}/>
         <PreviewDetails data={detailsData}/>
         <div className='preview__main'>
-
+          <PreviewDescription/>
           <PreviewSkills/>
           <PreviewExperience/>
           <PreviewEducation/>

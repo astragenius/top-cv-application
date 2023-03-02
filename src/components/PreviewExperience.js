@@ -2,7 +2,12 @@ import React from 'react'
 
 function PreviewExperience() {
   return (
-    <section><h4>Experience</h4></section>
+    <section>
+      <div className='title__preview'>
+
+          <h4>Experience</h4>
+      </div>
+      </section>
   )
 }
 
