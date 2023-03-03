@@ -231,3 +231,10 @@ button {
   margin-block: 1em;
   color: rgb(20, 62, 114);
 }
+
+
+/* experience */
+.experience__content {
+  display: flex;
+  justify-content: space-between;
+}

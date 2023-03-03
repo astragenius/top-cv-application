@@ -3,8 +3,8 @@ import React from 'react'
 function PreviewSkills() {
   return (
     <section>
-      <div className='title__preview'>
-          <h4>Skills</h4>
+      <div >
+          <h4 className='title__preview'>Skills</h4>
           <ul>
             <li>HTML</li>
             <li>CSS</li>

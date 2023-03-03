@@ -5,9 +5,9 @@ function PreviewDetails(props) {
     console.log(image)
   return (
     <section className='preview__details'>
-        <div className='title__preview'>
+        <div>
 
-        <h4>Personal Details</h4>
+        <h4  className='title__preview'>Personal Details</h4>
         </div>
         <div>
             <p>Phone Number</p>

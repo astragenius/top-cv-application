@@ -3,9 +3,9 @@ import React from 'react'
 function PreviewEducation() {
   return (
     <section>
-      <div className='title__preview'>
+      <div >
 
-      <h4>Education</h4>
+      <h4 className='title__preview'>Education</h4>
       </div>
     </section>
   )
