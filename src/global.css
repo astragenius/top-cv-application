@@ -212,6 +212,7 @@ button {
   /* border: 2px solid black; */
   grid-row: 2 / -1;
   grid-column: 2 / -1;
+  padding: 1em;
 }
 .preview__details{
   
@@ -226,15 +227,56 @@ button {
   font-size: 1.3rem;
 }
 
+
+
 .title__preview {
   border-bottom: 1px solid #64748b;
   margin-block: 1em;
   color: rgb(20, 62, 114);
 }
 
-
-/* experience */
-.experience__content {
+/* skills */
+.skills__content {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skills__content li {
+  font-weight: 600;
+}
+
+/* Details */
+.details__content {
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+}
+/* experience */
+.experience__content,
+.education__content {
+  display: flex;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  
+}
+
+/* Education */
+
+.education__date,
+.experience__date {
+  margin-right: auto;
+}
+.education__description,
+.experience__description {
+  min-width: 50%;
+  
+}
+
+.education__description p:first-of-type,
+.experience__description p:first-of-type,
+.details__content p:first-of-type {
+  font-weight: bold;
+  font-size: 1.1rem;
+  -webkit-margin-after: 0.3em;
+          margin-block-end: 0.3em;
 }

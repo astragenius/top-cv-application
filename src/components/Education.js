@@ -1,28 +1,75 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function Education() {
+function Education(props) {
+
+  const [schoolName, setSchoolName] = useState('');
+  const [city, setCity] = useState('');
+  const [degree, setDegree] = useState('');
+  const [subject, setSubject] = useState('');
+  const setEducation = props.getEducation
+  
+
+  const getInput = (e) => {
+    e.preventDefault();
+    const eduInfo = {schoolName, city, degree, subject}
+    setEducation(eduInfo)
+
+  }
+
   return (
     <section>
-        <form>
+        <form onSubmit={getInput}>
                 <h3>Education</h3>
 
                 
-                <input placeholder='School Name' type="text" name="school" id="" />
+                <input 
+                placeholder='School Name' 
+                type="text" 
+                name="school" 
+                id=""
+                onChange={(e) => {setSchoolName(e.target.value)}}
+                />
 
               
-                <input placeholder='City' type="text" name="city" id="" />
+                <input
+                placeholder='City' 
+                type="text" 
+                name="city" 
+                id=""
+                onChange={(e) => {setCity(e.target.value)}} 
+                />
 
                
-                <input placeholder='Degree' type="text" name="degree" id="" />
+                <input 
+                placeholder='Degree' 
+                type="text" 
+                name="degree" 
+                id=""
+                onChange={(e) => {setDegree(e.target.value)}} 
+                />
 
                 
-                <input placeholder='Subject' type="text" name="subject" id="" />
+                <input 
+                placeholder='Subject' 
+                type="text" 
+                name="subject" 
+                id="" 
+                onChange={(e) => {setSubject(e.target.value)}}
+                />
 
                  <label htmlFor="">From:</label>
-                 <input type="date" name="from" id="" />
+                 <input 
+                 type="date" 
+                 name="from" 
+                 id="" 
+                 />
 
                  <label htmlFor="">To:</label>
-                 <input type="date" name="to" id="" />
+                 <input 
+                 type="date" 
+                 name="to" 
+                 id="" 
+                 />
 
                  <button className='add__btn' type="submit">Add</button>
                  <button className='del__btn'>Delete</button> 

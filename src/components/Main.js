@@ -10,13 +10,19 @@ import CVPreview from './CVPreview'
 function Main() {
 
     const [value, setValue] = useState({})
+    const [skill, setSkill] = useState([])
+    const [educationInfo, setEducationInfo] = useState({})
 
     const getPersoInfo = (value) => {
        
         setValue(value)
     }
-    const getSkill = (value) => {
-
+    const getSkills = (value) => {
+      setSkill([...skill, value])
+      //console.log(value)
+    }
+    const getEducation = (value) => {
+      setEducationInfo(value)
     }
     
 
@@ -25,13 +31,14 @@ function Main() {
         <section className='input__section'>
 
           <PersonalInput getInfo={getPersoInfo}/>
-          <SkillInput getSkill={getSkill}/>
-          <Education/>
+          <SkillInput getSkill={getSkills}/>
+          <Education getEducation={getEducation}/>
           <Experience/>
         </section>
 
         <section className='preview__section'>
-         <CVPreview data={value}/>
+         <CVPreview data={value} skills={skill} educationInfo={educationInfo}/>
+
         </section>
        
     </main>

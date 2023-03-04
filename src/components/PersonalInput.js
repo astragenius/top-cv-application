@@ -17,7 +17,7 @@ function PersonalInput(props) {
   const getPersoInfo = (e) => {
     e.preventDefault()
     const persoInfo = {name, lastName, title, phoneNumber, email, about, image}
-    console.log(persoInfo)
+    //console.log(persoInfo)
     
     sendInfo(persoInfo)
   } 
