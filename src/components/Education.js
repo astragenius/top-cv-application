@@ -6,12 +6,14 @@ function Education(props) {
   const [city, setCity] = useState('');
   const [degree, setDegree] = useState('');
   const [subject, setSubject] = useState('');
+  const [from, setFrom] = useState('')
+  const [to, setTo] = useState('')
   const setEducation = props.getEducation
   
 
   const getInput = (e) => {
     e.preventDefault();
-    const eduInfo = {schoolName, city, degree, subject}
+    const eduInfo = {schoolName, city, degree, subject, from, to}
     setEducation(eduInfo)
 
   }
@@ -61,14 +63,16 @@ function Education(props) {
                  <input 
                  type="date" 
                  name="from" 
-                 id="" 
+                 id=""
+                 onChange={(e) => {setFrom(e.target.value)}} 
                  />
 
                  <label htmlFor="">To:</label>
                  <input 
                  type="date" 
                  name="to" 
-                 id="" 
+                 id=""
+                 onChange={(e) => {setTo(e.target.value)}} 
                  />
 
                  <button className='add__btn' type="submit">Add</button>
