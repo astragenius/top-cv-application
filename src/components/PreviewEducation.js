@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment/moment';
 
 function PreviewEducation(props) {
 
@@ -12,7 +13,7 @@ function PreviewEducation(props) {
       <div className="education__container">
         <div className="education__content">
           <div className='education__date'>
-            <p><b>{from} - {to}</b></p>
+            <p><b>{moment(from).format('YYYY')} - {moment(to).format('YYYY')}</b></p>
           </div>
           <div className='education__description'>
             <p>{schoolName}, {city}</p>

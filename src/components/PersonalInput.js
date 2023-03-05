@@ -54,7 +54,7 @@ function PersonalInput(props) {
             </div>
 
             <button className='add__btn' type='submit'>Add</button>
-            <button className='del__btn' type='button'>Delete</button>
+            <button className='del__btn' type='reset'>Delete</button>
         </form>
     </section>
   )

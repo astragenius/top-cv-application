@@ -74,6 +74,7 @@ function Education(props) {
                  id=""
                  onChange={(e) => {setTo(e.target.value)}} 
                  />
+                 
 
                  <button className='add__btn' type="submit">Add</button>
                  <button className='del__btn'>Delete</button> 

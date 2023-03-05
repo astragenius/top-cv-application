@@ -1,6 +1,11 @@
+import moment from 'moment/moment';
 import React from 'react'
 
-function PreviewExperience() {
+function PreviewExperience(props) {
+
+  const {job, company, dateFrom, dateTo} = props.data
+  //console.log(props.data)
+  
   return (
     <section>
       <div >
@@ -11,11 +16,11 @@ function PreviewExperience() {
       <div className='experience__container'>
             <div className='experience__content'>
               <div className='experience__date'>
-                <p><b>2015 - Present</b></p>
+                <p><b>{moment(dateFrom).format('YYYY')} - {moment(dateTo).format('YYYY')}</b></p>
               </div>
               <div className='experience__description'>
-                <p>Senior Web Developer</p>
-                <p>Facebook Inc. Menlo Park</p>
+                <p>{job}</p>
+                <p>{company}</p>
               </div>
             </div>
 
@@ -25,5 +30,6 @@ function PreviewExperience() {
       </section>
   )
 }
+
 
 export default PreviewExperience
