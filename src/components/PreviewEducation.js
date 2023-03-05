@@ -6,7 +6,7 @@ import EducationContent from './EducationContent'
 function PreviewEducation(props) {
 
   const data = props.data
-  console.log(data)
+  
   return (
     <section>
       <div >

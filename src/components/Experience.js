@@ -10,10 +10,15 @@ function Experience(props) {
   const [dateTo, setTo] = useState('')
 
   const setExperience = props.getExperience
+  const delItem = props.delItem
   const getInput = (e) => {
     e.preventDefault()
     const experienceInput = {id: uuidv4(), job, company, dateFrom, dateTo}
     setExperience(experienceInput)
+    setJob('')
+    setCompany('')
+    setFrom('')
+    setTo('')
   } 
 
   return (
@@ -26,7 +31,8 @@ function Experience(props) {
             placeholder='Job Position' 
             type="text" 
             name="job" 
-            id="" 
+            value={job}
+            required 
             onChange={(e) => {setJob(e.target.value)}}
             />
 
@@ -35,7 +41,8 @@ function Experience(props) {
              placeholder='Company Name' 
              type="text" 
              name="company" 
-             id=""
+             value={company}
+             required
              onChange={(e) => {setCompany(e.target.value)}} 
              />
 
@@ -43,7 +50,8 @@ function Experience(props) {
             <input 
             type="date" 
             name="from" 
-            id=""
+            value={dateFrom}
+            required
             onChange={(e) => {setFrom(e.target.value)}} 
             />
 
@@ -51,12 +59,13 @@ function Experience(props) {
             <input 
             type="date" 
             name="to" 
-            id=""
+            value={dateTo}
+            required
             onChange={(e) => {setTo(e.target.value)}} 
             />
 
             <button className='add__btn' type="submit">Add</button>
-            <button className='del__btn'>Delete</button>
+            <button className='del__btn' onClick={() => {delItem('exp')}}>Delete</button>
 
         </form>
     </section>

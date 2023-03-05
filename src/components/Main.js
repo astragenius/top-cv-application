@@ -29,12 +29,14 @@ function Main() {
     const delItem = (subject) => {
 
       if(subject === 'edu') {
-        console.log('test')
+        
         
         setEducationInfo(educationInfo.slice(0, -1))
-        console.log(educationInfo)
+       
       }else if(subject === 'exp') {
+        console.log('test')
         setExperienceInfo(experienceInfo.slice(0, -1))
+        console.log(experienceInfo)
       }
     }
     
