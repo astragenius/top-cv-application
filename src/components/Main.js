@@ -34,9 +34,9 @@ function Main() {
         setEducationInfo(educationInfo.slice(0, -1))
        
       }else if(subject === 'exp') {
-        console.log('test')
+       
         setExperienceInfo(experienceInfo.slice(0, -1))
-        console.log(experienceInfo)
+       
       }
     }
     
