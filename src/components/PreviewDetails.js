@@ -1,7 +1,7 @@
 import React from 'react'
 
 function PreviewDetails(props) {
-    const {phoneNumber, email, image} = props.data
+    const {phoneNumber, email, street, streetNumber, city, zipCode} = props.data
     
   return (
     <section className='preview__details'>
@@ -17,8 +17,12 @@ function PreviewDetails(props) {
             <p>Email:</p>
             <p>{email}</p>
         </div>
-        <div>
-            <img src={image} alt="" />
+        <div className='details__content'>
+            <p>Adress:</p>
+            <p>{street}, {streetNumber}</p> 
+            <p>{zipCode}, {city}</p>
+            
+           
         </div>
     </section>
   )
