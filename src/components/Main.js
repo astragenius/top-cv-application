@@ -25,6 +25,18 @@ function Main() {
       
       setExperienceInfo([...experienceInfo, value])
     }
+
+    const delItem = (subject) => {
+
+      if(subject === 'edu') {
+        console.log('test')
+        
+        setEducationInfo(educationInfo.slice(0, -1))
+        console.log(educationInfo)
+      }else if(subject === 'exp') {
+        setExperienceInfo(experienceInfo.slice(0, -1))
+      }
+    }
     
 
   return (
@@ -33,8 +45,8 @@ function Main() {
 
           <PersonalInput getInfo={getPersoInfo}/>
           
-          <Education getEducation={getEducation}/>
-          <Experience getExperience={getExperience}/>
+          <Education getEducation={getEducation} delItem={delItem}/>
+          <Experience getExperience={getExperience} delItem={delItem}/>
         </section>
 
         <section className='preview__section'>

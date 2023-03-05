@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 function Experience(props) {
 
@@ -11,7 +12,7 @@ function Experience(props) {
   const setExperience = props.getExperience
   const getInput = (e) => {
     e.preventDefault()
-    const experienceInput = {job, company, dateFrom, dateTo}
+    const experienceInput = {id: uuidv4(), job, company, dateFrom, dateTo}
     setExperience(experienceInput)
   } 
 

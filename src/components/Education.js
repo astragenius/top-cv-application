@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 
 function Education(props) {
 
@@ -9,14 +10,22 @@ function Education(props) {
   const [from, setFrom] = useState('')
   const [to, setTo] = useState('')
   const setEducation = props.getEducation
+  const delItem = props.delItem;
   
 
   const getInput = (e) => {
     e.preventDefault();
-    const eduInfo = {schoolName, city, degree, subject, from, to}
+    const eduInfo = {id: uuidv4(), schoolName, city, degree, subject, from, to}
     setEducation(eduInfo)
+    setSchoolName('')
+    setCity('')
+    setDegree('')
+    setSubject('')
+    setFrom('')
+    setTo('')
 
   }
+ 
 
   return (
     <section>
@@ -28,7 +37,8 @@ function Education(props) {
                 placeholder='School Name' 
                 type="text" 
                 name="school" 
-                id=""
+                value={schoolName}
+                required
                 onChange={(e) => {setSchoolName(e.target.value)}}
                 />
 
@@ -37,7 +47,8 @@ function Education(props) {
                 placeholder='City' 
                 type="text" 
                 name="city" 
-                id=""
+                value={city}
+                required
                 onChange={(e) => {setCity(e.target.value)}} 
                 />
 
@@ -46,7 +57,8 @@ function Education(props) {
                 placeholder='Degree' 
                 type="text" 
                 name="degree" 
-                id=""
+                value={degree}
+                required
                 onChange={(e) => {setDegree(e.target.value)}} 
                 />
 
@@ -55,7 +67,8 @@ function Education(props) {
                 placeholder='Subject' 
                 type="text" 
                 name="subject" 
-                id="" 
+                value={subject}
+                required
                 onChange={(e) => {setSubject(e.target.value)}}
                 />
 
@@ -63,7 +76,8 @@ function Education(props) {
                  <input 
                  type="date" 
                  name="from" 
-                 id=""
+                 value={from}
+                 required
                  onChange={(e) => {setFrom(e.target.value)}} 
                  />
 
@@ -71,13 +85,17 @@ function Education(props) {
                  <input 
                  type="date" 
                  name="to" 
-                 id=""
+                 value={to}
                  onChange={(e) => {setTo(e.target.value)}} 
                  />
                  
 
                  <button className='add__btn' type="submit">Add</button>
-                 <button className='del__btn'>Delete</button> 
+                 <button 
+                 className='del__btn' 
+                 onClick={() => {delItem('edu')}}
+                 >Delete
+                 </button> 
         </form>
     </section>
   )
