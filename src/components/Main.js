@@ -10,8 +10,8 @@ function Main() {
 
     const [value, setValue] = useState({})
    
-    const [educationInfo, setEducationInfo] = useState({})
-    const [experienceInfo, setExperienceInfo] = useState({})
+    const [educationInfo, setEducationInfo] = useState([])
+    const [experienceInfo, setExperienceInfo] = useState([])
 
     const getPersoInfo = (value) => {
        
@@ -19,11 +19,11 @@ function Main() {
     }
     
     const getEducation = (value) => {
-      setEducationInfo(value)
+      setEducationInfo([...educationInfo, value])
     }
     const getExperience = (value) => {
       
-      setExperienceInfo(value)
+      setExperienceInfo([...experienceInfo, value])
     }
     
 

@@ -12,16 +12,14 @@ function CVPreview(props) {
     const {name, lastName, title} = props.data
     const {phoneNumber, email, image, about} = props.data
 
-    const {schoolName, city, degree, subject, from, to} = props.educationInfo
-    const {job, company, dateFrom, dateTo} = props.experienceInfo
    
-
     const headerData = {name, lastName, title}
     const detailsData = {phoneNumber, email, image}
     const aboutMeData = {about}
  
-    const educationData = {schoolName, city, degree, subject, from, to}
-    const experienceData = {job, company, dateFrom, dateTo}
+    const educationData = props.educationInfo
+    const experienceData = props.experienceInfo
+
 
    
 

@@ -1,11 +1,13 @@
-import moment from 'moment/moment';
+
 import React from 'react'
+import ExperienceContent from './ExperienceContent';
+
 
 function PreviewExperience(props) {
 
-  const {job, company, dateFrom, dateTo} = props.data
-  //console.log(props.data)
   
+  
+  const data = props.data;
   return (
     <section>
       <div >
@@ -14,15 +16,11 @@ function PreviewExperience(props) {
       </div>
 
       <div className='experience__container'>
-            <div className='experience__content'>
-              <div className='experience__date'>
-                <p><b>{moment(dateFrom).format('YYYY')} - {moment(dateTo).format('YYYY')}</b></p>
-              </div>
-              <div className='experience__description'>
-                <p>{job}</p>
-                <p>{company}</p>
-              </div>
-            </div>
+        
+        {data.map(el => {
+        return <ExperienceContent data={el}/>
+        })}
+            
 
       </div>
 
